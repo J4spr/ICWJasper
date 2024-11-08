@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/articles.css' %}">
+    <title>Force Explorer</title>   
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Force Explorer</h1>
+            <p>Unlock the mysteries of the Force</p>
+        </div>
+         <div class="account">
+        <nav>
+            <ul>
+                {% if user.is_aunthenticated %}
+                <li>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+                {%else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'articles' %}">Articles</a></li>
+                <li><a href="{% url 'training' %}">Training</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container2">
+        <section>
+            {% for article in articles %}
+                <div class="article">
+                    <h2>{{ article.1 }}</h2>
+                    <p class="post-content">{{ article.2 }}</p>
+                    <p class="post-date">{{ article.3 }}</p>
+                    <a href="#">Read more</a>
+                </div> 
+            {% endfor %}
+
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #ffd700;
+    /* Jedi gold */
+}
+
+.logo p {
+    margin: 5px 0 0;
+    font-style: italic;
+    color: #ccc;
+    /* Lighter text for the tagline */
+}
+
+.account ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.account ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.account ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* White text for links */
+    transition: color 0.3s ease;
+}
+
+.account ul li a:hover {
+    color: #ffd700;
+    /* Yellow accent color on hover */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    /* White text for links */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    /* Yellow accent color on hover */
+}

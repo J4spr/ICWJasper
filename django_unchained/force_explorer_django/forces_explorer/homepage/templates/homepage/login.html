@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <title>Login - Force Explorer</title>
+</head>
+
+<body>
+<header>
+        <div class="logo">
+            <h1>Force Explorer</h1>
+            <p>Unlock the mysteries of the Force</p>
+        </div>
+         <div class="account">
+        <nav>
+            <ul>
+                {% if user.is_aunthenticated %}
+                <li>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+                {%else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'articles' %}">Articles</a></li>
+                <li><a href="{% url 'training' %}">Training</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <main>
+        <section class="hero">
+            <h2>Login to Force Explorer</h2>
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="{% url 'signup' %}" class="btn">Sign up here</a></p>
+        </section>
+    <footer>
+        <p>&copy; 2024 Force Explorer. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

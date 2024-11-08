@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>{{ article.title }}</h3>
+        <h4>{{ article.author }}</h4>
+        <br>
+        <p>{{ article.text }}</p>
+        <br>
+        <a href="{% url 'index' %}">Go back</a>
+    </body>
+</html>

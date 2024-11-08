@@ -1,0 +1,86 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: calc(45% - 15px);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.article h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.post-date {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.article a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article a:hover {
+    color: #f0c809;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    /* Dark background reminiscent of space */
+    color: #fff;
+    /* White text for contrast */
+}
+
+@media only screen and (max-width: 480px) {
+    .article h2 {
+        font-size: 1.2em;
+        /* Reduce heading font size */
+    }
+
+    .post-content {
+        font-size: 1em;
+        /* Reduce content font size */
+    }
+
+    /* Adjust padding and margins as needed */
+    .article {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}

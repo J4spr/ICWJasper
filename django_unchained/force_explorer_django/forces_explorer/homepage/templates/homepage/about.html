@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force Explorer</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Force Explorer</h1>
+            <p>Unlock the mysteries of the Force</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'articles' %}">Articles</a></li>
+                <li><a href="{% url 'training' %}">Training</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>About Force Explorer</h2>
+            <p>Welcome to Force Explorer, your gateway to the mysteries of the Force. Our mission is to delve deep into
+                the ancient teachings of the Jedi and the Sith, exploring their philosophies, techniques, and legacies.
+            </p>
+            <p>Whether you're a seasoned Jedi Knight or a curious Padawan, you'll find a wealth of knowledge and
+                inspiration here. Join us on a journey of discovery as we uncover the secrets of the Force and learn
+                what it means to truly embrace its power.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Force Explorer. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

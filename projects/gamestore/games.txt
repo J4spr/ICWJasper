@@ -1,0 +1,4 @@
+1/CallOfDuty/50/18/2/4
+0/BattleBorn/40/5/medium
+1/WarThunder/30/20/1/1
+0/ItTakesTwo/50/25/medium

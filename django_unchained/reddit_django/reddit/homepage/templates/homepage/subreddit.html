@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computernerds</title>
+</head>
+<body>
+     {% load static%}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+<h2>{{subreddit_name}}</h2>
+
+<h3>
+    {% if post.theme %}
+        Theme: {{post.theme}}
+    {% else %}
+        no theme
+    {% endif %}
+</h3>
+
+<div>{{post.text}}</div>
+</body>
+</html>
